@@ -4,11 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy — Layoutly</title>
-  <meta name="description" content="How Layoutly handles your data: it runs on your computer, with no account and no tracking.">
+  <meta name="description" content="How Layoutly handles personal data: the app runs on your computer, with no account, analytics or tracking.">
   <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Stack+Sans+Headline:wght@400;500&family=Stack+Sans+Notch:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,39 +18,98 @@
   <main class="legal">
     <div class="legal-head container">
       <h1>Privacy</h1>
-      <p class="legal-lead">Layoutly runs on your computer. There is no account, no analytics and no tracking. The only thing the app sends anywhere is your license key, to check it.</p>
+      <p class="legal-lead">Layoutly runs on your computer. There is no account, no analytics and no tracking. The app sends data only to check a license, and this website uses no cookies.</p>
       <p class="legal-date">Last updated September 28, 2026</p>
     </div>
     <article class="legal-body container">
-      <h2>What stays on your computer</h2>
-      <p>Everything you do in Layoutly happens locally. The app keeps a small settings file in its own data folder on your computer, with:</p>
+      <nav class="legal-toc" aria-label="On this page">
+        <p>On this page</p>
+        <ol>
+        <li><a href="#who">Who is responsible</a></li>
+        <li><a href="#summary">The short version</a></li>
+        <li><a href="#app-local">What the app keeps on your computer</a></li>
+        <li><a href="#app-network">What the app sends, and when</a></li>
+        <li><a href="#purchases">Buying a license</a></li>
+        <li><a href="#support">When you email us</a></li>
+        <li><a href="#website">This website</a></li>
+        <li><a href="#bases">Why we may use your data (legal bases)</a></li>
+        <li><a href="#retention">How long we keep it</a></li>
+        <li><a href="#sharing">Who else receives it</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#other">Children, security and changes</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="who">Who is responsible</h2>
+      <p>Layoutly is made by Alexandru Iordache, an independent developer based in Romania, who is the controller of the personal data described here. Contact: <a href="mailto:contact.iordache@gmail.com">contact.iordache@gmail.com</a>.</p>
+
+      <h2 id="summary">The short version</h2>
       <ul>
-        <li>your inspect key, your stack and your AI assistant;</li>
+        <li>Layoutly runs on your computer. There is no account, no analytics, no crash reporting and no tracking.</li>
+        <li>The desktop app sends data in one case only: official builds check your license key with Lemon Squeezy.</li>
+        <li>This website sets no cookies, stores nothing in your browser and serves its own fonts.</li>
+        <li>We never sell or rent personal data, and we don't use it for advertising.</li>
+      </ul>
+
+      <h2 id="app-local">What the app keeps on your computer</h2>
+      <p>The app keeps one settings file in its data folder on your computer (for example <code>~/Library/Application Support/Layoutly</code> on macOS). It holds:</p>
+      <ul>
+        <li>your inspect shortcut, your stack and your AI assistant, and whether you finished onboarding;</li>
         <li>the last website you opened;</li>
-        <li>how many free components and styles you used today, so the daily allowance can reset at midnight;</li>
-        <li>your license key and its activation ID, if you bought one.</li>
+        <li>today's free usage: the date, and which components and sites you used, so repeating one doesn't count twice;</li>
+        <li>if you bought a license: the key, its activation ID, and when it was activated and last checked.</li>
       </ul>
-      <p>Websites you open in the built-in browser keep their cookies and cache in that same folder, like in any browser. Components, screenshots and styles you copy go to your clipboard and nowhere else.</p>
+      <p>Websites you open in the built-in browser keep their own cookies, cache and storage in that same folder, as in any browser. Components, screenshots and styles you extract stay in the app's memory and go to your clipboard when you copy them. Nothing of this leaves your computer unless you paste it somewhere. Uninstalling the app and deleting that folder removes all of it.</p>
 
-      <h2>What leaves your computer</h2>
+      <h2 id="app-network">What the app sends, and when</h2>
       <ul>
-        <li><strong>License checks</strong> (official builds only). When you activate a key, Layoutly sends it to the Lemon Squeezy license API together with a device name made of your computer's name and operating system, so you can see and manage your activations. When the app starts, it sends the key and the activation ID to confirm the license is still valid. Deactivating from Settings sends them once more.</li>
-        <li><strong>The websites you visit.</strong> The built-in browser loads them directly, so those sites receive your request the way they would from any browser.</li>
-        <li><strong>Your AI assistant.</strong> “Copy &amp; open” copies the result and opens your AI in your default browser. Layoutly sends nothing to it; you paste.</li>
+        <li><strong>License checks (official builds only).</strong> When you activate a key, the app sends the key and a device name made of your computer's name and operating system (for example “Alex's MacBook (darwin)”) to the Lemon Squeezy license API, so the activation can be counted and managed. Each time the app starts, it sends the key and the activation ID to confirm the license is still valid. Deactivating in Settings sends them once more. Lemon Squeezy also sees your IP address, as with any internet request.</li>
+        <li><strong>The websites you open.</strong> The built-in browser loads them directly. Those sites receive your request, IP address and cookies exactly as they would from any browser, under their own privacy policies.</li>
+        <li><strong>Links you click.</strong> “Copy &amp; open” opens your AI assistant, and the Contact buttons open your email app or X, in your own apps. Layoutly sends nothing to them; you decide what to paste or write.</li>
       </ul>
-      <p>The open-source build makes no license checks at all.</p>
+      <p>The open-source build makes no license checks and sends nothing at all.</p>
 
-      <h2>Buying a license</h2>
-      <p>Payments are handled by Lemon Squeezy, the merchant of record, under its own privacy policy. Layoutly never sees your card details. We receive the order details Lemon Squeezy shares with sellers, such as your email address, and use them only to deliver and support your license.</p>
+      <h2 id="purchases">Buying a license</h2>
+      <p>Licenses are sold by Lemon Squeezy (Lemon Squeezy, LLC, a Stripe company), which acts as the merchant of record: it takes the payment, issues the invoice, handles sales tax and VAT, and emails you the license key. Lemon Squeezy handles your payment details under its own privacy policy; we never see your card.</p>
+      <p>From each order we receive the details Lemon Squeezy shares with sellers: your name, email address, country and the order itself. We use them only to deliver your license, support you, process refunds and keep the records the law requires.</p>
 
-      <h2>This website</h2>
-      <p>This site is hosted on GitHub Pages, which may log visits as described in GitHub's privacy statement. It loads fonts from Google Fonts and Fontshare and reads the project's star count from the GitHub API. We use no cookies and no analytics.</p>
+      <h2 id="support">When you email us</h2>
+      <p>If you write to us, we receive your email address and whatever you choose to send. Our email is hosted by Google (Gmail). We use your message only to answer it.</p>
 
-      <h2>Your requests</h2>
-      <p>To ask what we hold about you, or to have your purchase or support emails deleted, write to <a href="mailto:contact.iordache@gmail.com">contact.iordache@gmail.com</a>.</p>
+      <h2 id="website">This website</h2>
+      <ul>
+        <li>The site is hosted on GitHub Pages. GitHub may log technical data such as IP addresses to keep the service running and secure, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</li>
+        <li>To show the project's star count, your browser asks the GitHub API for it, so GitHub receives that request.</li>
+        <li>Download buttons lead to GitHub Releases, which serves the installers.</li>
+        <li>Fonts, images and scripts are served from this site. The live demo runs entirely in your browser.</li>
+        <li>No cookies, no local storage, no analytics, no advertising or social trackers.</li>
+      </ul>
 
-      <h2>Changes</h2>
-      <p>If this policy changes, the new version will be posted on this page with a new date.</p>
+      <h2 id="bases">Why we may use your data (legal bases)</h2>
+      <ul>
+        <li><strong>To provide what you asked for</strong> (the license, its activation and checks, support for customers): performance of a contract, GDPR Article 6(1)(b).</li>
+        <li><strong>To keep accounting and tax records</strong> of orders: legal obligation, Article 6(1)(c).</li>
+        <li><strong>To answer other messages and keep the website secure</strong>: legitimate interests, Article 6(1)(f).</li>
+      </ul>
+
+      <h2 id="retention">How long we keep it</h2>
+      <ul>
+        <li>Order details: as long as your license exists, and afterwards for as long as tax and accounting law requires.</li>
+        <li>Activation records at Lemon Squeezy: until you deactivate the device or the license ends.</li>
+        <li>Support emails: until the conversation is over and no longer needed, or sooner if you ask.</li>
+        <li>Data on your computer: until you delete it.</li>
+      </ul>
+
+      <h2 id="sharing">Who else receives it</h2>
+      <p>Only the service providers named above, each for its own part: Lemon Squeezy (sales and licenses), GitHub (website and downloads) and Google (email). Some of them process data in the United States; where they do, they rely on safeguards recognised under the GDPR, such as the EU–US Data Privacy Framework or the European Commission's standard contractual clauses. We disclose data to authorities only when the law requires it.</p>
+
+      <h2 id="rights">Your rights</h2>
+      <p>Under the GDPR you can ask us to access, correct or delete your personal data, to restrict or object to its use, and to receive it in a portable format. Write to <a href="mailto:contact.iordache@gmail.com">contact.iordache@gmail.com</a>; we answer within one month. We may need to confirm it's you, for example by replying from the email used for the order.</p>
+      <p>You can also complain to a data protection authority: the one where you live or work, or Romania's <a href="https://www.dataprotection.ro" target="_blank" rel="noopener">ANSPDCP</a>.</p>
+
+      <h2 id="other">Children, security and changes</h2>
+      <p>Layoutly is not directed at children under 16. We keep what we hold to the minimum described here and protect access to it. We make no decisions about you by automated means.</p>
+      <p>If this policy changes, the new version will be posted here with a new date. If a change affects how we use data we already hold, we'll tell customers by email before it applies.</p>
     </article>
   </main>
   <footer class="legal-foot">

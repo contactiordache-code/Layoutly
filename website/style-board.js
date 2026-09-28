@@ -15,7 +15,7 @@
       { value: '#00bcff', count: 9, usage: ['background'] },
       { value: '#93c5fd', count: 6, usage: ['background'] },
     ],
-    fonts: [{ family: 'General Sans', stack: '"General Sans", sans-serif', count: 64, weights: ['400', '500', '600'] }],
+    fonts: [{ family: 'Instrument Sans', stack: '"Instrument Sans", sans-serif', count: 64, weights: ['400', '500', '600'] }],
     fontSizes: ['56px', '40px', '28px', '18px', '14px'].map((size) => ({ size, count: 1, lineHeight: '1.2', weight: '500' })),
     radii: ['4px', '14px', '32px'].map((value) => ({ value, count: 1 })),
     shadows: ['0 1px 2px rgba(15, 23, 42, 0.12)', '0 8px 20px rgba(15, 23, 42, 0.12)', '0 20px 40px rgba(21, 93, 252, 0.25)'].map((value) => ({ value, count: 1 })),

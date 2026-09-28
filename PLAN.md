@@ -89,7 +89,8 @@ Se scanează până la 4000 de elemente vizibile: culori text / fundal / bordur�
 
 1. **Lemon Squeezy**
    - [ ] Cont + store, produs „Layoutly Lifetime” la **$10**, tip *single payment*.
-   - [ ] Activează *License keys* pe produs, limită 3 activări, fără expirare.
+   - [ ] Activează *License keys* pe produs, limită **3 activări**, fără expirare (așa scrie în Terms și pe site).
+   - [ ] Rambursări: Terms promit **14 zile, rambursare integrală** — le faci din dashboard-ul Lemon Squeezy (Orders → Refund), iar cheia se dezactivează.
    - [ ] Copiază link-ul de checkout în `src/main/config.js` → `checkoutUrl` și în `website/config.js`.
    - [ ] (Opțional, recomandat) pune `productId` în `config.js` ca o cheie de la alt produs să nu fie acceptată.
 2. **Build & distribuție** (automat, în repo-ul public `contactiordache-code/Layoutly`)
@@ -116,7 +117,8 @@ Se scanează până la 4000 de elemente vizibile: culori text / fundal / bordur�
 4. **Landing page**
    - [ ] (Opțional) domeniu propriu (ex. `layoutly.app`) legat la GitHub Pages.
    - [ ] Pune link-urile reale în `website/config.js`.
-   - [x] Termeni + politică de confidențialitate: `website/terms.html`, `website/privacy.html` (draft — citește-le și ajustează-le).
+   - [x] Termeni + politică de confidențialitate: `website/terms.html`, `website/privacy.html` (GDPR, rambursare 14 zile, lege română).
+   - [x] Fonturile site-ului sunt găzduite local (fără Google Fonts / Fontshare), licențe OFL în `website/fonts/licenses/`.
 
 ## 5. Roadmap
 

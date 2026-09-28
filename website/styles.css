@@ -1,3 +1,11 @@
+/* Fonts are served from this site (no third-party font requests). All are SIL Open Font
+   License 1.1; see fonts/README.md. */
+@font-face { font-family: "Inter"; src: url(fonts/inter.woff2) format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Stack Sans Headline"; src: url(fonts/stack-sans-headline.woff2) format("woff2"); font-weight: 200 700; font-display: swap; }
+@font-face { font-family: "Stack Sans Notch"; src: url(fonts/stack-sans-notch.woff2) format("woff2"); font-weight: 200 700; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url(fonts/jetbrains-mono.woff2) format("woff2"); font-weight: 100 800; font-display: swap; }
+@font-face { font-family: "Instrument Sans"; src: url(fonts/instrument-sans.woff2) format("woff2"); font-weight: 400 700; font-display: swap; }
+
 :root {
   --bg: #ffffff;
   --bg-2: #f9fafb;
@@ -113,7 +121,7 @@ p { margin: 0; }
 .pc-art-maker img { width: 128px; height: 128px; border-radius: 30px; box-shadow: 0 24px 50px rgba(0, 24, 128, 0.35); }
 .pc-art-maker .pc-photo { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 0; box-shadow: none; object-fit: cover; object-position: 50% 40%; transform: scale(1.1); transform-origin: 50% 0; }
 .pc-text-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
-.pc-preview { display: inline-flex; flex: none; align-items: center; height: 36px; padding: 0 14px; border-radius: 14px; background: rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); color: #fff; font: 500 14px/20px "General Sans", var(--font); opacity: 0; transform: translateY(6px); pointer-events: none; transition: opacity 0.3s, transform 0.3s, background 0.2s; }
+.pc-preview { display: inline-flex; flex: none; align-items: center; height: 36px; padding: 0 14px; border-radius: 14px; background: rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); color: #fff; font: 500 14px/20px "Instrument Sans", var(--font); opacity: 0; transform: translateY(6px); pointer-events: none; transition: opacity 0.3s, transform 0.3s, background 0.2s; }
 .pc.is-open .pc-preview { opacity: 1; transform: none; pointer-events: auto; }
 .pc-preview:hover { background: rgba(255, 255, 255, 0.2); }
 .pc-roll { display: block; height: 20px; overflow: hidden; }
@@ -131,7 +139,7 @@ p { margin: 0; }
 .pc-expand { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
 .pc.is-open .pc-expand { grid-template-rows: 1fr; }
 .pc-expand-inner { min-height: 0; overflow: hidden; }
-.pc-expand-body { margin: 10px 0 0; padding: 22px 24px; border-radius: 34px; background: rgba(0, 0, 0, 0.05); font-family: "General Sans", var(--font); }
+.pc-expand-body { margin: 10px 0 0; padding: 22px 24px; border-radius: 34px; background: rgba(0, 0, 0, 0.05); font-family: "Instrument Sans", var(--font); }
 .pc-desc { font-size: 14px; line-height: 1.55; color: #3b3b3b; }
 .pc-meta { margin-top: 18px; }
 .pc-meta > p { padding-bottom: 12px; border-bottom: 1px solid rgba(0, 0, 0, 0.1); font-size: 14px; font-weight: 500; color: #1c1c1c; }
@@ -150,7 +158,7 @@ p { margin: 0; }
 .pc-blur i:nth-child(2) { --b: 1.25px; --m0: 62.5%; --m1: 75%; --m2: 87.5%; --m3: 100%; }
 .pc-blur i:nth-child(3) { --b: 2.5px; --m0: 75%; --m1: 87.5%; --m2: 100%; --m3: 112.5%; }
 .pc-blur i:nth-child(4) { --b: 5px; --m0: 87.5%; --m1: 100%; --m2: 112.5%; --m3: 125%; }
-.pc-text { position: absolute; left: 26px; right: 26px; bottom: 24px; font-family: "General Sans", var(--font); color: #fff; }
+.pc-text { position: absolute; left: 26px; right: 26px; bottom: 24px; font-family: "Instrument Sans", var(--font); color: #fff; }
 .pc-title { font-size: 22px; line-height: 1.2; font-weight: 500; letter-spacing: -0.01em; }
 .pc-sub { margin-top: 2px; font-size: 12px; color: rgba(255, 255, 255, 0.6); }
 
@@ -175,13 +183,13 @@ p { margin: 0; }
 .acme-mark circle:nth-child(3) { fill: #93c5fd; }
 
 .sb-fonts .sb-art { flex-wrap: wrap; align-content: center; justify-content: flex-start; gap: 12px 28px; }
-.font-aa { font: 500 128px/0.9 "General Sans", var(--font); letter-spacing: -0.04em; color: #0f172a; }
+.font-aa { font: 500 128px/0.9 "Instrument Sans", var(--font); letter-spacing: -0.04em; color: #0f172a; }
 .font-meta { display: grid; gap: 4px; min-width: 0; }
-.font-name { font: 500 22px/1.2 "General Sans", var(--font); color: #0f172a; }
+.font-name { font: 500 22px/1.2 "Instrument Sans", var(--font); color: #0f172a; }
 .font-stack { font: 500 11px/1.5 var(--mono); color: var(--muted); }
 .font-weights { display: flex; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; }
 .font-weights li { display: grid; justify-items: center; gap: 2px; min-width: 52px; padding: 8px 10px 6px; border-radius: 10px; background: var(--bg-2); box-shadow: inset 0 0 0 1px rgba(15, 19, 36, 0.05); font: 500 11px var(--mono); color: var(--muted); }
-.font-weights b { font-family: "General Sans", var(--font); font-size: 22px; line-height: 1.1; color: #0f172a; }
+.font-weights b { font-family: "Instrument Sans", var(--font); font-size: 22px; line-height: 1.1; color: #0f172a; }
 
 .swatches { flex-direction: column; align-items: stretch; gap: 6px; }
 .swatches li { display: flex; }
@@ -193,13 +201,13 @@ p { margin: 0; }
 .swatches .is-copied span { color: var(--accent); }
 
 .sb-logo .sb-art { flex-direction: column; gap: 16px; }
-.acme-logo { display: flex; align-items: center; gap: 12px; font: 600 48px/1 "General Sans", var(--font); letter-spacing: -0.04em; color: #0f172a; }
+.acme-logo { display: flex; align-items: center; gap: 12px; font: 600 48px/1 "Instrument Sans", var(--font); letter-spacing: -0.04em; color: #0f172a; }
 .acme-logo .acme-mark { width: 46px; height: 46px; }
 .sb-file { padding: 4px 10px; border-radius: 999px; background: var(--bg-2); box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.08); font: 500 11px var(--mono); color: var(--muted); }
 
 .type-scale { flex-direction: column; align-items: stretch; justify-content: flex-end; }
 .type-scale li { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); }
-.type-scale b { font: 500 var(--s)/1.1 "General Sans", var(--font); letter-spacing: -0.03em; color: #0f172a; }
+.type-scale b { font: 500 var(--s)/1.1 "Instrument Sans", var(--font); letter-spacing: -0.03em; color: #0f172a; }
 .type-scale span { font: 500 11px var(--mono); color: var(--muted); }
 
 .radii { align-items: flex-end; gap: 20px; }
@@ -412,6 +420,8 @@ p { margin: 0; }
 .tier-body li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 20px; color: var(--text-secondary); }
 .tier-body li svg { flex-shrink: 0; width: 20px; height: 20px; margin-top: 2px; color: var(--muted); }
 .tier-featured li svg { color: var(--accent); }
+.tier-fine { margin-top: 12px; font-size: 12px; line-height: 1.5; text-align: center; color: var(--muted); }
+.tier-fine a { color: var(--brand-blue-light); text-decoration: underline; text-underline-offset: 3px; }
 .corner { position: absolute; z-index: 1; width: 6px; height: 6px; border: 0 solid #9ca3af; }
 .corner.tl { top: -2px; left: -2px; border-top-width: 2px; border-left-width: 2px; }
 .corner.tr { top: -2px; right: -2px; border-top-width: 2px; border-right-width: 2px; }
@@ -547,6 +557,15 @@ details p { color: var(--muted); margin-top: 12px; }
 .legal-body ul { padding-left: 20px; }
 .legal-body li { margin-bottom: 8px; }
 .legal-body li::marker { color: var(--brand-blue-light); }
+.legal-body code { padding: 1px 5px; border-radius: 5px; background: var(--bg-3); font: 500 0.85em var(--mono); color: var(--text); }
+.legal-toc { margin: 8px 0 8px; padding: 18px 20px; border-radius: 16px; background: var(--bg-2); box-shadow: inset 0 0 0 1px var(--line); }
+.legal-toc p { margin: 0 0 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand-blue-light); }
+.legal-toc ol { display: grid; gap: 4px 24px; margin: 0; padding-left: 20px; font-size: 15px; }
+.legal-toc li { margin: 0; }
+.legal-body .legal-toc a { text-decoration: none; }
+.legal-body .legal-toc a:hover { text-decoration: underline; }
+.legal-body h2 { scroll-margin-top: 24px; }
+@media (min-width: 768px) { .legal-toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .legal-body strong { font-weight: 600; color: var(--text); }
 .legal-body a { color: var(--brand-blue-light); text-decoration: underline; text-underline-offset: 3px; }
 .legal-body a:hover { color: var(--brand-blue); }
