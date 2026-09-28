@@ -111,7 +111,7 @@ body.inspecting .browser::after { content: ""; position: absolute; inset: 0; z-i
 .pill { height: 30px; padding: 0 12px; border: 0; border-radius: 999px; background: #fff; box-shadow: var(--tile); color: var(--text-2); font-size: 12px; font-weight: 500; white-space: nowrap; font-variant-numeric: tabular-nums; transition: color 0.15s, box-shadow 0.15s; }
 .pill:hover { color: var(--brand); box-shadow: 0 0 0 1px var(--line-2); }
 .pill.pro { color: var(--brand-2); background: var(--accent-soft); box-shadow: none; }
-.pill.empty { color: #fff; background: var(--blue-stock); box-shadow: var(--blue-shadow); }
+.pill.spent { color: #fff; background: var(--blue-stock); box-shadow: var(--blue-shadow); }
 
 @media (max-width: 1180px) { #style-btn .btn-label, #inspect-btn .btn-label { display: none; } }
 

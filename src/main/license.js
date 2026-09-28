@@ -30,7 +30,11 @@ async function activate(key) {
     return { ok: false, error: 'Could not reach the license server. Check your internet connection.' };
   }
   const { data } = result;
-  if (!data.activated) return { ok: false, error: data.error || 'This license key is not valid.' };
+  if (!data.activated) {
+    // The API's own wording for an unknown key is "license_key not found."; say it in plain words.
+    const unknown = !data.error || /not found/i.test(data.error);
+    return { ok: false, error: unknown ? 'We could not find this license key. Check it against your receipt email.' : data.error };
+  }
   if (!productMatches(data)) return { ok: false, error: 'This key belongs to a different product.' };
   return { ok: true, instanceId: data.instance?.id || null };
 }

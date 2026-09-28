@@ -105,7 +105,7 @@
     } else {
       const f = state.free;
       ui.planPill.textContent = `Free today · ${f.componentsLeft}/${f.components} components · ${f.stylesLeft}/${f.styles} styles`;
-      ui.planPill.className = f.componentsLeft + f.stylesLeft === 0 ? 'pill empty' : 'pill';
+      ui.planPill.className = f.componentsLeft + f.stylesLeft === 0 ? 'pill spent' : 'pill';
       ui.planPill.title = `Resets every day. Unlimited for ${state.price} once.`;
     }
     const last = $('#continue-last');
@@ -358,7 +358,7 @@
       el(
         'div',
         { class: 'result-head' },
-        el('div', {}, el('div', { class: 'result-title mono' }, c.label), el('div', { class: 'muted small' }, `${c.host} · ${c.nodeCount} elements`)),
+        el('div', {}, el('div', { class: 'result-title mono' }, c.label), el('div', { class: 'muted small' }, `${c.host} · ${c.nodeCount} ${c.nodeCount === 1 ? 'element' : 'elements'}`)),
         el('button', { class: 'btn btn-ghost btn-sm', onclick: toggleInspector }, 'Pick another'),
       ),
       c.truncated ? el('p', { class: 'warning' }, 'Large component: the markup was truncated to the first 400 elements.') : null,

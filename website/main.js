@@ -17,13 +17,13 @@ document.documentElement.classList.add('js');
   document.querySelectorAll('[data-price]').forEach((n) => (n.textContent = cfg.price));
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Real star count; the "GitHub" label stays if the repo is private or the API is unreachable.
+  // Real star count; the "GitHub" label stays while there are no stars yet, or if the API is unreachable.
   const stars = document.querySelectorAll('[data-github-stars]');
   fetch(`https://api.github.com/repos/${cfg.repo}`)
     .then((res) => (res.ok ? res.json() : null))
     .then((repo) => {
       const n = repo && repo.stargazers_count;
-      if (typeof n !== 'number') return;
+      if (typeof n !== 'number' || n === 0) return;
       const label = n >= 1000 ? `${(n / 1000).toFixed(1).replace(/\.0$/, '')}k` : String(n);
       stars.forEach((s) => (s.textContent = label));
     })
