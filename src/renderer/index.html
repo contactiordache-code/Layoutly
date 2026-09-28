@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+  <title>Layoutly</title>
+  <link rel="stylesheet" href="ui/style-board.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="toolbar">
+      <div class="nav">
+        <button class="icon-btn" id="back" title="Back" aria-label="Back">
+          <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="icon-btn" id="forward" title="Forward" aria-label="Forward">
+          <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button class="icon-btn" id="reload" title="Reload" aria-label="Reload">
+          <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+        </button>
+      </div>
+
+      <form class="url" id="url-form" autocomplete="off">
+        <svg viewBox="0 0 24 24" class="url-icon"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="url" type="text" spellcheck="false" placeholder="Enter a website — e.g. stripe.com">
+        <div class="progress" id="progress"></div>
+      </form>
+
+      <button class="btn btn-dark btn-inspect" id="inspect-btn" title="Inspect a component">
+        <span class="btn-pill"><svg viewBox="0 0 24 24"><path d="M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z"/><path d="M5 3a2 2 0 0 0-2 2"/><path d="M19 3a2 2 0 0 1 2 2"/><path d="M5 21a2 2 0 0 1-2-2"/><path d="M9 3h1"/><path d="M9 21h2"/><path d="M14 3h1"/><path d="M3 9v1"/><path d="M21 9v2"/><path d="M3 14v1"/></svg></span>
+        <span class="btn-label">Inspect</span>
+        <kbd id="hotkey-badge"></kbd>
+      </button>
+      <button class="btn btn-ghost" id="style-btn" title="Site colors and fonts">
+        <svg viewBox="0 0 24 24"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/></svg>
+        <span class="btn-label">Style</span>
+      </button>
+      <button class="pill" id="plan-pill"></button>
+      <button class="icon-btn" id="settings-btn" title="Settings" aria-label="Settings">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+      </button>
+    </header>
+
+    <main class="workspace">
+      <section class="browser">
+        <webview id="view" src="about:blank" partition="persist:browse"></webview>
+
+        <div class="start" id="start">
+          <div class="start-inner">
+            <img class="logo-img big" src="logo.png" alt="" width="64" height="64">
+            <h1>Open <span class="notch">any website</span></h1>
+            <p>Then press <kbd class="hotkey-label"></kbd> and click a component to get its code.</p>
+            <form class="start-search" id="start-form" autocomplete="off">
+              <input id="start-url" type="text" spellcheck="false" placeholder="stripe.com">
+              <button class="btn btn-primary" type="submit">Open</button>
+            </form>
+            <div class="chips" id="quick-sites">
+              <button data-url="https://stripe.com">stripe.com</button>
+              <button data-url="https://linear.app">linear.app</button>
+              <button data-url="https://vercel.com">vercel.com</button>
+              <button data-url="https://www.apple.com">apple.com</button>
+              <button data-url="https://www.airbnb.com">airbnb.com</button>
+            </div>
+            <button class="link" id="continue-last" hidden></button>
+          </div>
+        </div>
+
+        <div class="board" id="style-board" hidden>
+          <header class="board-head">
+            <div>
+              <strong id="board-title"></strong>
+              <span class="muted small">Drag cards to rearrange · click a value to copy it</span>
+            </div>
+            <button class="btn btn-ghost btn-sm" id="close-board">Back to page</button>
+          </header>
+          <div class="board-scroll"><div id="style-board-root"></div></div>
+        </div>
+      </section>
+
+      <aside class="sidebar" id="sidebar" hidden>
+        <header class="sidebar-head">
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-tab="component" role="tab">Component</button>
+            <button class="tab" data-tab="style" role="tab">Style</button>
+          </div>
+          <button class="icon-btn" id="close-sidebar" title="Close" aria-label="Close sidebar">
+            <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </header>
+        <div class="panel" id="panel-component"></div>
+        <div class="panel" id="panel-style" hidden></div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- Onboarding -->
+  <div class="modal-backdrop" id="onboarding" hidden>
+    <div class="modal onboarding">
+      <div class="steps-dots"><span></span><span></span><span></span></div>
+
+      <section class="step" data-step="0">
+        <img class="logo-img big" src="logo.png" alt="" width="64" height="64">
+        <h2>Welcome to <span class="notch">Layoutly</span></h2>
+        <p class="muted">Copy any component from any website — and the site's colors and fonts — straight into your favorite AI.</p>
+        <ol class="how">
+          <li><b>1</b><div><strong>Open a website</strong><span>Use the built-in browser.</span></div></li>
+          <li><b>2</b><div><strong>Press your key</strong><span>Boxes appear, just like Chrome's Inspect.</span></div></li>
+          <li><b>3</b><div><strong>Click a component</strong><span>Its clean code opens in a sidebar, ready to paste.</span></div></li>
+        </ol>
+        <div class="modal-actions"><button class="btn btn-primary btn-lg" data-next>Get started</button></div>
+      </section>
+
+      <section class="step" data-step="1" hidden>
+        <h2>Choose your inspect key</h2>
+        <p class="muted">Press the key combination you want to use. It only works while Layoutly is in focus.</p>
+        <button class="keycap" id="hotkey-recorder" type="button"></button>
+        <p class="hint" id="hotkey-hint">Click the box, then press your keys.</p>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" data-prev>Back</button>
+          <button class="btn btn-primary btn-lg" data-next id="hotkey-next">Continue</button>
+        </div>
+      </section>
+
+      <section class="step" data-step="2" hidden>
+        <h2>Where will you paste it?</h2>
+        <p class="muted">We tailor the prompt for your stack and AI. You can change this anytime.</p>
+        <div class="field-label">Your stack</div>
+        <div class="choice-grid" id="stack-choices"></div>
+        <div class="field-label">Your AI</div>
+        <div class="choice-grid small" id="llm-choices"></div>
+        <div class="free-card">
+          <div>
+            <strong id="free-title">Free every day</strong>
+            <span id="free-copy"></span>
+          </div>
+          <span class="price-tag" id="onboarding-price"></span>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" data-prev>Back</button>
+          <button class="btn btn-ghost" id="onboarding-license">I have a license</button>
+          <button class="btn btn-primary btn-lg" id="onboarding-finish">Start for free</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Paywall / license -->
+  <div class="modal-backdrop" id="paywall" hidden>
+    <div class="modal paywall">
+      <button class="icon-btn modal-close" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      <img class="logo-img big" src="logo.png" alt="" width="64" height="64">
+      <h2 id="paywall-title">Unlock Layoutly forever</h2>
+      <p class="muted" id="paywall-text"></p>
+      <div class="price-box">
+        <div class="price"><span id="paywall-price"></span><small>one-time</small></div>
+        <ul>
+          <li>Unlimited components &amp; site styles</li>
+          <li>Mac &amp; Windows, all future updates</li>
+          <li>Works with ChatGPT, Claude, Gemini, Cursor…</li>
+        </ul>
+        <button class="btn btn-primary btn-lg btn-block" id="buy-btn">Get lifetime access</button>
+      </div>
+      <button class="btn btn-primary btn-lg btn-block" id="support-btn" hidden></button>
+      <form class="license-form" id="license-form">
+        <label for="license-key">Already bought? Enter your license key</label>
+        <div class="row">
+          <input id="license-key" type="text" spellcheck="false" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX">
+          <button class="btn btn-ghost" type="submit" id="activate-btn">Activate</button>
+        </div>
+        <p class="error" id="license-error" hidden></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <div class="modal-backdrop" id="settings" hidden>
+    <div class="modal settings">
+      <button class="icon-btn modal-close" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+      <h2>Settings</h2>
+      <div class="setting">
+        <div><strong>Inspect key</strong><span>Click, then press a new combination.</span></div>
+        <button class="keycap small" id="settings-hotkey" type="button"></button>
+      </div>
+      <p class="hint error" id="settings-hotkey-hint" hidden></p>
+      <div class="setting">
+        <div><strong>Stack</strong><span>Used in component prompts.</span></div>
+        <select id="settings-stack"></select>
+      </div>
+      <div class="setting">
+        <div><strong>AI assistant</strong><span>Opened by “Copy &amp; open”.</span></div>
+        <select id="settings-llm"></select>
+      </div>
+      <div class="setting">
+        <div><strong>License</strong><span id="settings-license-text"></span></div>
+        <button class="btn btn-ghost" id="settings-license-btn"></button>
+      </div>
+      <div class="setting">
+        <div><strong>Contact</strong><span>Ideas, bugs or feature requests. I read every message.</span></div>
+        <div class="setting-actions">
+          <button class="btn btn-ghost btn-sm" id="contact-email" type="button"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</button>
+          <button class="btn btn-ghost btn-sm" id="contact-x" type="button"><svg viewBox="0 0 24 24" stroke-width="1.6"><path d="M4 4 L20 20 M20 4 L13.5 11.5 M10.5 12.5 L4 20 M4 4 H9 L20 20 H15 Z"/></svg>X</button>
+        </div>
+      </div>
+      <div class="settings-foot">
+        <button class="link" id="replay-onboarding">Replay onboarding</button>
+        <span class="muted" id="settings-version"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="ui/style-board.js"></script>
+  <script src="formats.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

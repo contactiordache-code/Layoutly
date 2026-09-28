@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layoutly — Copy any website component into your AI</title>
+  <meta name="description" content="Press one key on any website, click a component and get its clean code and the site's colors and fonts — ready to paste into ChatGPT, Claude or Cursor. Open-source, or $10 lifetime.">
+  <meta property="og:title" content="Layoutly — Copy any website component into your AI">
+  <meta property="og:description" content="Inspect any site, copy any component and its design style as LLM-ready code. Mac & Windows. Open-source, or $10 lifetime.">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Stack+Sans+Headline:wght@400;500;600;700&family=Stack+Sans+Notch:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-frame">
+        <div class="nav-panel">
+          <div class="nav-bar">
+            <a class="nav-logo" href="#hero"><img src="logo.png" alt="" width="30" height="30"><span>Layoutly</span></a>
+            <div class="nav-mid">
+              <div class="nav-actions nav-actions-mid">
+                <a class="nav-star" href="#" data-github target="_blank" rel="noopener">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M7.99968 1.33301C4.31634 1.33301 1.33301 4.31634 1.33301 7.99967C1.33225 9.39919 1.77222 10.7634 2.59049 11.8988C3.40875 13.0342 4.56377 13.8831 5.89168 14.325C6.22501 14.383 6.34968 14.183 6.34968 14.0077C6.34968 13.8497 6.34101 13.325 6.34101 12.7663C4.66634 13.075 4.23301 12.3583 4.09968 11.983C4.02434 11.791 3.69968 11.1997 3.41634 11.041C3.18301 10.9163 2.84968 10.6077 3.40768 10.5997C3.93301 10.591 4.30768 11.083 4.43301 11.283C5.03301 12.291 5.99168 12.0077 6.37434 11.833C6.43301 11.3997 6.60768 11.1083 6.79968 10.9417C5.31634 10.775 3.76634 10.1997 3.76634 7.64967C3.76634 6.92434 4.02434 6.32501 4.44968 5.85767C4.38301 5.69101 4.14968 5.00767 4.51634 4.09101C4.51634 4.09101 5.07434 3.91634 6.34968 4.77501C6.89238 4.62438 7.45312 4.54857 8.01634 4.54967C8.58301 4.54967 9.14968 4.62434 9.68301 4.77434C10.9577 3.90767 11.5163 4.09167 11.5163 4.09167C11.883 5.00834 11.6497 5.69167 11.583 5.85834C12.0077 6.32501 12.2663 6.91634 12.2663 7.64967C12.2663 10.2083 10.7083 10.775 9.22501 10.9417C9.46634 11.1497 9.67501 11.5497 9.67501 12.175C9.67501 13.0663 9.66634 13.783 9.66634 14.0083C9.66634 14.183 9.79168 14.391 10.125 14.3243C11.4484 13.8775 12.5983 13.027 13.4129 11.8924C14.2276 10.7579 14.666 9.39642 14.6663 7.99967C14.6663 4.31634 11.683 1.33301 7.99968 1.33301Z" fill="white"/></svg>
+                  <span data-github-stars>GitHub</span>
+                </a>
+                <div class="nav-btn-group">
+                  <a class="am-btn am-sm am-light" href="#download" data-download-primary><span class="am-accent" aria-hidden="true"></span>Download</a>
+                </div>
+              </div>
+              <nav class="nav-links" aria-label="Main">
+                <div class="nav-links-list">
+                  <a href="#how">How it works</a>
+                  <a href="#features">Features</a>
+                  <a href="#pricing">Pricing</a>
+                  <a href="#faq">FAQ</a>
+                </div>
+                <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+              </nav>
+            </div>
+            <div class="nav-actions nav-actions-end">
+              <a class="nav-star" href="#" data-github target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M7.99968 1.33301C4.31634 1.33301 1.33301 4.31634 1.33301 7.99967C1.33225 9.39919 1.77222 10.7634 2.59049 11.8988C3.40875 13.0342 4.56377 13.8831 5.89168 14.325C6.22501 14.383 6.34968 14.183 6.34968 14.0077C6.34968 13.8497 6.34101 13.325 6.34101 12.7663C4.66634 13.075 4.23301 12.3583 4.09968 11.983C4.02434 11.791 3.69968 11.1997 3.41634 11.041C3.18301 10.9163 2.84968 10.6077 3.40768 10.5997C3.93301 10.591 4.30768 11.083 4.43301 11.283C5.03301 12.291 5.99168 12.0077 6.37434 11.833C6.43301 11.3997 6.60768 11.1083 6.79968 10.9417C5.31634 10.775 3.76634 10.1997 3.76634 7.64967C3.76634 6.92434 4.02434 6.32501 4.44968 5.85767C4.38301 5.69101 4.14968 5.00767 4.51634 4.09101C4.51634 4.09101 5.07434 3.91634 6.34968 4.77501C6.89238 4.62438 7.45312 4.54857 8.01634 4.54967C8.58301 4.54967 9.14968 4.62434 9.68301 4.77434C10.9577 3.90767 11.5163 4.09167 11.5163 4.09167C11.883 5.00834 11.6497 5.69167 11.583 5.85834C12.0077 6.32501 12.2663 6.91634 12.2663 7.64967C12.2663 10.2083 10.7083 10.775 9.22501 10.9417C9.46634 11.1497 9.67501 11.5497 9.67501 12.175C9.67501 13.0663 9.66634 13.783 9.66634 14.0083C9.66634 14.183 9.79168 14.391 10.125 14.3243C11.4484 13.8775 12.5983 13.027 13.4129 11.8924C14.2276 10.7579 14.666 9.39642 14.6663 7.99967C14.6663 4.31634 11.683 1.33301 7.99968 1.33301Z" fill="white"/></svg>
+                <span data-github-stars>GitHub</span>
+              </a>
+              <div class="nav-btn-group">
+                <a class="am-btn am-sm am-light" href="#download" data-download-primary><span class="am-accent" aria-hidden="true"></span>Download</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-menu" id="nav-menu" hidden>
+            <a href="#how">How it works</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <div class="nav-btn-group nav-menu-actions">
+              <a class="am-btn am-sm am-light" href="#download" data-download-primary><span class="am-accent" aria-hidden="true"></span>Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-bg">
+        <div class="container">
+          <div class="hero-center">
+            <div class="hero-inner">
+              <div class="hero-tags"><span>Mac</span><span class="sep" aria-hidden="true"></span><span>Windows</span><span class="sep" aria-hidden="true"></span><span>Open-source</span></div>
+              <h1>Copy <span class="notch">any website component</span> straight into your AI</h1>
+              <p class="hero-lead">Press one key, click any element and get its clean code plus the site's colors and fonts. <br>Ready to paste into ChatGPT, Claude, Cursor or any LLM.</p>
+              <div class="hero-cta">
+                <div class="hero-cta-row">
+                  <a class="am-btn" href="#download" data-download-primary><span class="am-accent" aria-hidden="true"></span>Download free</a>
+                  <a class="am-btn am-light" href="#" data-github target="_blank" rel="noopener"><span class="am-accent" aria-hidden="true"></span>View the source</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="container hero-logos" aria-label="Works with">
+          <p class="hero-logos-label">Works with the AI you already use</p>
+          <div class="hero-logos-grid">
+            <div><img src="logos/openai.svg" alt="OpenAI ChatGPT" width="116" height="24" loading="lazy"></div>
+            <div><img src="logos/claude.svg" alt="Claude" width="127" height="24" loading="lazy"></div>
+            <div><img src="logos/cursor.svg" alt="Cursor" width="153" height="24" loading="lazy"></div>
+            <div><img class="logo-v0" src="logos/v0.svg" alt="v0" width="48" height="24" loading="lazy"></div>
+            <div><img src="logos/gemini.svg" alt="Gemini" width="128" height="24" loading="lazy"></div>
+            <div><img src="logos/lovable.svg" alt="Lovable" width="124" height="24" loading="lazy"></div>
+            <div><img src="logos/githubcopilot.svg" alt="GitHub Copilot" width="184" height="24" loading="lazy"></div>
+            <div><img src="logos/windsurf.svg" alt="Windsurf" width="141" height="24" loading="lazy"></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="band" id="maker">
+      <div class="band-frame">
+        <div class="band-head">
+          <div class="band-head-main">
+            <p class="band-badge">BUILT BY</p>
+            <h2>One maker behind Layoutly, <span>say hi on X</span></h2>
+          </div>
+          <div class="band-head-side">
+            <p><span>Ideas, bugs, feature requests?</span> Send them my way — I read every message.</p>
+          </div>
+        </div>
+        <div class="maker">
+          <article class="pc pc-maker">
+            <div class="pc-main">
+              <div class="pc-art pc-art-maker"><img class="pc-photo" src="alexandru.jpg" alt="Portrait of Alexandru Iordache" width="780" height="1103" loading="lazy"></div>
+              <div class="pc-blur" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              <div class="pc-text pc-text-row">
+                <div><p class="pc-title">Alexandru Iordache</p><p class="pc-sub">Maker of Layoutly</p></div>
+                <a class="pc-preview" href="#" data-x target="_blank" rel="noopener" tabindex="-1"><span class="pc-roll"><span>Follow on X</span><span aria-hidden="true">Follow on X</span></span></a>
+              </div>
+            </div>
+            <div class="pc-expand" id="maker-more">
+              <div class="pc-expand-inner">
+                <div class="pc-expand-body">
+                  <p class="pc-desc">I built Layoutly because getting one component out of DevTools and into an AI chat took longer than building it. It's a small, focused tool: press a key, click what you like, paste it into your AI. Follow along on X for updates and what's coming next.</p>
+                  <div class="pc-meta">
+                    <p>The thought process behind Layoutly.</p>
+                    <div class="pc-chips"><span>Layoutly</span><span>Open-source</span><span>Mac &amp; Windows</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="pc-chevron pc-toggle" type="button" aria-expanded="false" aria-controls="maker-more" aria-label="Show more"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="demo">
+      <div class="band-frame">
+        <div class="band-head">
+          <div class="band-head-main">
+            <p class="band-badge">SEE IT IN ACTION</p>
+            <h2>Point at anything, <span>get only what matters</span></h2>
+          </div>
+          <div class="band-head-side">
+            <p><span>Try it right here.</span> Hover this very page and click anything — it’s Layoutly’s real extractor running in your browser.</p>
+          </div>
+        </div>
+        <div class="demo" data-demo>
+          <div class="demo-bar">
+            <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="demo-url" data-demo-url>layoutly</span>
+            <button class="demo-inspect on" type="button" data-demo-inspect aria-pressed="true">Inspect <kbd>⌥⇧S</kbd></button>
+          </div>
+          <div class="demo-body">
+            <iframe class="demo-frame" title="This page, ready to inspect"></iframe>
+            <div class="demo-side">
+              <div class="tabs" role="tablist"><button type="button" role="tab" data-demo-tab="component">Component</button><button type="button" role="tab" data-demo-tab="style">Style</button></div>
+              <div class="seg" data-demo-formats></div>
+              <p class="demo-label" data-demo-label>Hover the page, click any element</p>
+              <pre class="demo-code"><code data-demo-code></code></pre>
+              <div class="side-btns"><button type="button" class="on" data-demo-copy>Copy</button><button type="button" data-demo-claude>Copy &amp; open Claude</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="how">
+      <div class="band-frame">
+        <div class="band-head">
+          <div class="band-head-main">
+            <p class="band-badge">HOW IT WORKS</p>
+            <h2>From “I like that” <span>to working code in 10 seconds</span></h2>
+          </div>
+          <div class="band-head-side">
+            <p><span>Press, pick, paste.</span> No DevTools digging, no copying half a stylesheet.</p>
+          </div>
+        </div>
+        <ol class="steps" data-steps>
+          <li class="step">
+            <div class="step-rail"><i aria-hidden="true"></i><span>Press</span><b aria-hidden="true"></b></div>
+            <div class="step-stage stage-keys" aria-hidden="true">
+              <span class="key" style="--k: 0s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h6l6 18h6"/><path d="M14 3h7"/></svg><small>option</small></span>
+              <span class="key" style="--k: 0.12s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18v-6H5l7-7 7 7h-4v6H9z"/></svg><small>shift</small></span>
+              <span class="key key-go" style="--k: 0.24s"><b>S</b></span>
+            </div>
+            <h3>One <span class="notch">key.</span></h3>
+            <p>Your shortcut, on any site.</p>
+          </li>
+          <li class="step">
+            <div class="step-rail"><i aria-hidden="true"></i><span>Pick</span><b aria-hidden="true"></b></div>
+            <div class="step-stage stage-pick" aria-hidden="true">
+              <span class="mock-card"><i class="mock-icon"></i><i class="mock-line"></i><i class="mock-line short"></i><i class="mock-btn"></i></span>
+              <span class="mock-card"><i class="mock-icon"></i><i class="mock-line"></i><i class="mock-line short"></i><i class="mock-btn"></i><span class="pick-box"></span><span class="pick-tip">div.card<em>312 × 188</em></span></span>
+              <svg class="pick-cursor" viewBox="0 0 24 24"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg>
+            </div>
+            <h3>One <span class="notch">click.</span></h3>
+            <p>Just the part you like.</p>
+          </li>
+          <li class="step">
+            <div class="step-rail"><i aria-hidden="true"></i><span>Paste</span><b aria-hidden="true"></b></div>
+            <div class="step-stage stage-paste" aria-hidden="true">
+              <div class="composer">
+<pre class="composer-code"><code><span class="t">&lt;div</span> <span class="a">class</span>=<span class="s">"card"</span><span class="t">&gt;</span>
+  <span class="t">&lt;h3&gt;</span>Pro<span class="t">&lt;/h3&gt;</span>
+<span class="t">&lt;/div&gt;</span>
+<span class="p">.card</span> { <span class="a">padding</span>: 24px; }</code></pre>
+                <div class="composer-row"><span>Rebuild this in React</span><i class="composer-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></i></div>
+              </div>
+            </div>
+            <h3><span class="notch">Done.</span></h3>
+            <p>Clean code, in your AI.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="band" id="style">
+      <div class="band-frame">
+        <div class="band-head">
+          <div class="band-head-main">
+            <p class="band-badge">SITE STYLE</p>
+            <h2>Your client’s brand, <span>unpacked in one click</span></h2>
+          </div>
+          <div class="band-head-side">
+            <p><span>Open their site, press your key.</span> Fonts, colors, type scale, radii and shadows — ready for your AI.</p>
+          </div>
+        </div>
+        <div class="sb" data-board>
+          <div class="sb-bar">
+            <span class="sb-host"><svg class="acme-mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="33" cy="36" r="26"/><circle cx="67" cy="36" r="26"/><circle cx="50" cy="66" r="26"/></svg>acme.com</span>
+            <span class="sb-count">5 colors · 1 font · 5 sizes · 3 radii · 3 shadows</span>
+          </div>
+          <div class="sb-grid">
+            <article class="sb-tile sb-fonts">
+              <div class="sb-head"><h3>Fonts</h3><p>Families &amp; weights</p></div>
+              <div class="sb-art">
+                <span class="font-aa" aria-hidden="true">Aa</span>
+                <div class="font-meta">
+                  <p class="font-name">General Sans</p>
+                  <p class="font-stack">"General Sans", sans-serif</p>
+                  <ul class="font-weights">
+                    <li><b style="font-weight: 400">Ag</b>400</li>
+                    <li><b style="font-weight: 500">Ag</b>500</li>
+                    <li><b style="font-weight: 600">Ag</b>600</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article class="sb-tile sb-colors">
+              <div class="sb-head"><h3>Colors</h3><p>Named by role, click to copy</p></div>
+              <ul class="sb-art swatches">
+                <li><button type="button" data-copy="#0f1324" style="--c: #0f1324"><i></i><b>text</b><span data-copy-label>#0f1324</span></button></li>
+                <li><button type="button" data-copy="#155dfc" style="--c: #155dfc"><i></i><b>primary</b><span data-copy-label>#155dfc</span></button></li>
+                <li><button type="button" data-copy="#00bcff" style="--c: #00bcff"><i></i><b>accent-1</b><span data-copy-label>#00bcff</span></button></li>
+                <li><button type="button" data-copy="#93c5fd" style="--c: #93c5fd"><i></i><b>accent-2</b><span data-copy-label>#93c5fd</span></button></li>
+                <li><button type="button" data-copy="#f5f8ff" style="--c: #f5f8ff"><i></i><b>background</b><span data-copy-label>#f5f8ff</span></button></li>
+              </ul>
+            </article>
+            <article class="sb-tile sb-logo">
+              <div class="sb-head"><h3>Logo</h3><p>Copied as a component</p></div>
+              <div class="sb-art">
+                <div class="acme-logo" aria-hidden="true"><svg class="acme-mark" viewBox="0 0 100 100"><circle cx="33" cy="36" r="26"/><circle cx="67" cy="36" r="26"/><circle cx="50" cy="66" r="26"/></svg>acme</div>
+                <span class="sb-file">logo.svg</span>
+              </div>
+            </article>
+            <article class="sb-tile sb-scale">
+              <div class="sb-head"><h3>Type scale</h3><p>Every size used</p></div>
+              <ul class="sb-art type-scale" aria-label="56, 40, 28 and 18 pixels">
+                <li style="--s: 56px"><b aria-hidden="true">Aa</b><span>56</span></li>
+                <li style="--s: 40px"><b aria-hidden="true">Aa</b><span>40</span></li>
+                <li style="--s: 28px"><b aria-hidden="true">Aa</b><span>28</span></li>
+                <li style="--s: 18px"><b aria-hidden="true">Aa</b><span>18</span></li>
+              </ul>
+            </article>
+            <article class="sb-tile sb-radius">
+              <div class="sb-head"><h3>Radius &amp; shadow</h3><p>Corners and depth</p></div>
+              <ul class="sb-art radii">
+                <li><i></i>4px</li>
+                <li><i></i>14px</li>
+                <li><i></i>32px</li>
+              </ul>
+            </article>
+            <article class="sb-tile sb-export">
+              <div class="sb-export-side">
+                <div class="sb-head"><h3>Export</h3><p>The exact output Layoutly copies.</p></div>
+                <div class="sb-formats" role="group" aria-label="Format">
+                  <button type="button" data-format="css" aria-pressed="true">CSS</button>
+                  <button type="button" data-format="tailwind" aria-pressed="false">Tailwind</button>
+                  <button type="button" data-format="prompt" aria-pressed="false">AI prompt</button>
+                </div>
+                <button class="am-btn am-sm am-light sb-copy" type="button" data-export-copy><span class="am-accent" aria-hidden="true"></span><span data-copy-label>Copy</span></button>
+              </div>
+<pre class="sb-code" tabindex="0" aria-label="Exported style"><code data-export-code><span class="p">:root</span> {
+  <span class="c">/* Colors */</span>
+  <span class="a">--color-background</span>: <span class="s">#f5f8ff</span>;
+  <span class="a">--color-text</span>: <span class="s">#0f1324</span>;
+  <span class="a">--color-primary</span>: <span class="s">#155dfc</span>;
+  <span class="a">--color-accent-1</span>: <span class="s">#00bcff</span>;
+  <span class="a">--color-accent-2</span>: <span class="s">#93c5fd</span>;
+}</code></pre>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="features">
+      <div class="band-frame">
+        <div class="band-head">
+          <div class="band-head-main">
+            <p class="band-badge">FEATURES</p>
+            <h2>Everything you’d dig out of DevTools, <span>none of the noise</span></h2>
+          </div>
+          <div class="band-head-side">
+            <p><span>Built for pasting into an AI,</span> not for reading in an inspector.</p>
+          </div>
+        </div>
+        <div class="band-grid">
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z"/><path d="M5 3a2 2 0 0 0-2 2"/><path d="M19 3a2 2 0 0 1 2 2"/><path d="M5 21a2 2 0 0 1-2-2"/><path d="M9 3h1"/><path d="M9 21h2"/><path d="M14 3h1"/><path d="M3 9v1"/><path d="M21 9v2"/><path d="M3 14v1"/></svg></div>
+            <h3>Component → clean code</h3>
+            <p>HTML plus only the CSS that matters — computed styles, deduplicated, with hover states and ::before/::after. No framework soup.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/></svg></div>
+            <h3>The site's design system</h3>
+            <p>Colors, fonts, type scale, radii and shadows of any site — exported as CSS variables, a Tailwind config or an AI prompt.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></div>
+            <h3>Works with any LLM</h3>
+            <p>Prompts tailored to your stack. “Copy &amp; open” jumps straight into ChatGPT, Claude or Gemini — or paste into Cursor.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></svg></div>
+            <h3>Your shortcut</h3>
+            <p>Choose any key combo in onboarding. It's only active while Layoutly is focused, so it never fights your other apps.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
+            <h3>Screenshot included</h3>
+            <p>Every component comes with a crisp screenshot you can copy and attach to your chat for pixel-perfect results.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>Private by design</h3>
+            <p>Everything runs on your computer. No account, no tracking — the only network call is checking your license.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="pricing">
+      <div class="band-frame">
+        <div class="band-head">
+          <div class="band-head-main">
+            <p class="band-badge">SIMPLE, HONEST PRICING</p>
+            <h2>Two ways to get Layoutly, <span>zero subscriptions</span></h2>
+          </div>
+          <div class="band-head-side">
+            <p><span>The download is free: 2 copies every day.</span> $10 once makes it unlimited. No account, no monthly bill.</p>
+          </div>
+        </div>
+
+        <div class="pricing-tiers">
+          <article class="tier">
+            <div class="tier-top">
+              <h3>OPEN-SOURCE</h3>
+              <p>For developers who like to build it themselves</p>
+              <span class="corner tl" aria-hidden="true"></span><span class="corner tr" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span><span class="corner bl" aria-hidden="true"></span>
+            </div>
+            <div class="tier-price"><span class="tier-amount">$0</span><span class="tier-period">forever</span></div>
+            <div class="tier-body">
+              <p class="tier-label">WHAT'S INCLUDED:</p>
+              <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Full source code on GitHub</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Run it from source with no limits</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>All export formats</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Mac &amp; Windows</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Community support on GitHub</li>
+              </ul>
+              <a class="am-btn am-light am-block" href="#" data-github target="_blank" rel="noopener"><span class="am-accent" aria-hidden="true"></span>VIEW ON GITHUB</a>
+            </div>
+            <span class="corner br" aria-hidden="true"></span><span class="corner bl" aria-hidden="true"></span>
+          </article>
+
+          <article class="tier tier-featured">
+            <div class="tier-top">
+              <h3>LIFETIME</h3>
+              <p>Ready-to-install app — download and go</p>
+            </div>
+            <div class="tier-price"><span class="tier-amount" data-price>$10</span><span class="tier-period">one-time</span></div>
+            <div class="tier-body">
+              <p class="tier-label">WHAT'S INCLUDED:</p>
+              <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Unlimited copies — no daily limit</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Everything in Open-source</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Ready-made Mac &amp; Windows installers</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>No build tools or terminal needed</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>All future updates</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Use it on up to 3 computers</li>
+              </ul>
+              <a class="am-btn am-block" href="#" data-checkout><span class="am-accent" aria-hidden="true"></span>GET LIFETIME ACCESS</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="download">
+      <div class="band-frame">
+        <div class="band-head">
+          <div class="band-head-main">
+            <p class="band-badge">DOWNLOAD</p>
+            <h2>Download Layoutly, <span>start in a minute</span></h2>
+          </div>
+          <div class="band-head-side">
+            <p><span>Free: 2 components + 2 styles every day.</span> Unlimited with a $10 lifetime key, activated inside the app.</p>
+          </div>
+        </div>
+        <div class="band-grid">
+          <a class="dl" data-dl="macArm" href="#">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg>
+            <span><strong>macOS</strong><small>Apple Silicon (M1–M4)</small></span>
+            <i class="dl-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></i>
+          </a>
+          <a class="dl" data-dl="macIntel" href="#">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg>
+            <span><strong>macOS</strong><small>Intel</small></span>
+            <i class="dl-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></i>
+          </a>
+          <a class="dl" data-dl="windows" href="#">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5.5l7.4-1v7.1H3zm0 13l7.4 1v-7H3zm8.2 1.1L21 21v-8.4h-9.8zm0-15.2v7.2H21V3z"/></svg>
+            <span><strong>Windows</strong><small>Windows 10 &amp; 11</small></span>
+            <i class="dl-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="faq">
+      <div class="band-frame">
+        <div class="band-head">
+          <div class="band-head-main">
+            <p class="band-badge">FAQ</p>
+            <h2>Questions, <span>answered</span></h2>
+          </div>
+          <div class="band-head-side">
+            <p><span>Still stuck?</span> Open an issue on GitHub.</p>
+          </div>
+        </div>
+        <details>
+          <summary>How is this different from Chrome DevTools?</summary>
+          <p>DevTools shows you everything: thousands of rules, overrides and framework classes. Layoutly gives you just the component you clicked, as small readable HTML + CSS and a prompt your AI understands — in one click.</p>
+        </details>
+        <details>
+          <summary>Which websites does it work on?</summary>
+          <p>Any website you can open in a browser. Layoutly has a built-in Chromium browser: type the address, press your key and click.</p>
+        </details>
+        <details>
+          <summary>Does it work with ChatGPT, Claude, Cursor, v0, Lovable…?</summary>
+          <p>Yes. The output is plain text. Choose your stack once and every prompt asks your AI for exactly that (React + Tailwind, Next.js, Vue, Svelte or HTML/CSS).</p>
+        </details>
+        <details>
+          <summary>Is the download free?</summary>
+          <p>Yes. Every day you get 2 components and 2 site styles for free — no card, no account. They come back each midnight. Need more in a day? $10 once makes it unlimited.</p>
+        </details>
+        <details>
+          <summary>Is it really $10 forever?</summary>
+          <p>Yes — one payment, no subscription, including future updates. Your license works on up to 3 of your computers. Prefer to build it yourself? The source code is free on GitHub.</p>
+        </details>
+        <details>
+          <summary>What's the difference between open-source and $10?</summary>
+          <p>Not the features — it's the same app. The code is MIT-licensed on GitHub: clone it, run “npm install” then “npm start”, and everything is unlocked, with no daily limit and no key. The $10 gets you the ready-made Mac and Windows installers (no Node.js, no terminal) and funds development.</p>
+        </details>
+        <details>
+          <summary>Is it OK to copy other websites?</summary>
+          <p>Layoutly is built for learning and inspiration: understanding how a layout is built and recreating the pattern in your own product. Don't copy brand assets, logos or copyrighted content.</p>
+        </details>
+        <details>
+          <summary>My computer warns me before opening Layoutly.</summary>
+          <p><strong>macOS:</strong> open System Settings → Privacy &amp; Security, scroll down and click “Open Anyway” next to Layoutly. <strong>Windows:</strong> on the SmartScreen prompt click “More info” → “Run anyway”. You only need to do this once.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-banner">
+        <img class="cta-logo" src="logo.png" alt="" width="64" height="64" loading="lazy">
+        <h2>Something worth copying, <span class="notch">in your AI this afternoon.</span></h2>
+        <div class="cta-banner-actions">
+          <a class="am-btn" href="#download" data-download-primary><span class="am-accent" aria-hidden="true"></span>Download free</a>
+          <a class="am-btn am-light" href="#" data-github target="_blank" rel="noopener"><span class="am-accent" aria-hidden="true"></span>View the source</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="footer-name" href="#hero">Layoutly</a>
+          <p>Copy any website component and its design style straight into your AI — clean code, colors and fonts, ready for ChatGPT, Claude or Cursor.</p>
+          <nav aria-label="Social links">
+            <ul class="footer-socials">
+              <li><a href="#" data-x target="_blank" rel="noopener" aria-label="X (Twitter)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4 L20 20 M20 4 L13.5 11.5 M10.5 12.5 L4 20 M4 4 H9 L20 20 H15 Z"/></svg></a></li>
+              <li><a href="#" data-github target="_blank" rel="noopener" aria-label="GitHub"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a></li>
+              <li><a href="mailto:contact.iordache@gmail.com" aria-label="Email"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <h2>Product</h2>
+            <ul>
+              <li><a class="fl" href="#how">How it works</a></li>
+              <li><a class="fl" href="#features">Features</a></li>
+              <li><a class="fl" href="#style">Style board</a></li>
+              <li><a class="fl" href="#pricing">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Resources</h2>
+            <ul>
+              <li><a class="fl" href="#download">Download</a></li>
+              <li><a class="fl" href="#" data-github target="_blank" rel="noopener">Source code</a></li>
+              <li><a class="fl" href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Contact</h2>
+            <ul>
+              <li><a class="fl" href="#maker">The maker</a></li>
+              <li><a class="fl" href="#" data-x target="_blank" rel="noopener">X (Twitter)</a></li>
+              <li><a class="fl" href="mailto:contact.iordache@gmail.com">Email</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Layoutly. All rights reserved.</span>
+        <span class="footer-legal"><a class="fl" href="terms.html">Terms</a><a class="fl" href="privacy.html">Privacy</a></span>
+        <a class="fl footer-top-link" href="#hero"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19 V5 M5 12 L12 5 L19 12"/></svg>Back to top</a>
+      </div>
+    </div>
+
+    <div class="footer-mark reveal" aria-hidden="true"><span>Layoutly</span></div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+  <script src="shared/formats.js"></script>
+  <script src="demo.js"></script>
+  <script src="style-board.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+{
+  "name": "layoutly",
+  "productName": "Layoutly",
+  "version": "0.1.0",
+  "description": "Inspect any website, copy any component and its design style as LLM-ready code.",
+  "main": "src/main/main.js",
+  "author": "Alexandru Iordache",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build:ui": "vite build",
+    "typecheck": "tsc --noEmit",
+    "prestart": "npm run build:ui",
+    "start": "electron .",
+    "prestart:official": "npm run build:ui",
+    "start:official": "LAYOUTLY_EDITION=official electron .",
+    "test": "node --test test/*.test.js",
+    "sync:website": "mkdir -p website/shared && cp src/inspector/webview-preload.js website/shared/inspector.js && cp src/renderer/formats.js website/shared/formats.js",
+    "prewebsite": "npm run sync:website",
+    "website": "npx --yes serve website",
+    "predist": "npm run build:ui",
+    "dist": "electron-builder",
+    "dist:mac": "npm run build:ui && electron-builder --mac",
+    "dist:win": "npm run build:ui && electron-builder --win"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "clsx": "^2.1.1",
+    "electron": "^44.4.5",
+    "electron-builder": "^26.0.12",
+    "lucide-react": "^1.48.0",
+    "playwright-core": "^1.55.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "swapy": "^1.0.5",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1"
+  },
+  "build": {
+    "appId": "app.layoutly.desktop",
+    "productName": "Layoutly",
+    "artifactName": "${productName}-${os}-${arch}.${ext}",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "contactiordache-code",
+      "repo": "Layoutly",
+      "releaseType": "release"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/contactiordache-code/Layoutly.git"
+  },
+  "homepage": "https://contactiordache-code.github.io/Layoutly/"
+}

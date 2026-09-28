@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy — Layoutly</title>
+  <meta name="description" content="How Layoutly handles your data: it runs on your computer, with no account and no tracking.">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Stack+Sans+Headline:wght@400;500&family=Stack+Sans+Notch:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="legal-nav">
+    <div class="container legal-nav-row">
+      <a class="nav-logo legal-logo" href="./"><img src="logo.png" alt="" width="30" height="30"><span>Layoutly</span></a>
+      <a class="fl legal-back" href="./"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>Back to the site</a>
+    </div>
+  </header>
+  <main class="legal">
+    <div class="legal-head container">
+      <h1>Privacy</h1>
+      <p class="legal-lead">Layoutly runs on your computer. There is no account, no analytics and no tracking. The only thing the app sends anywhere is your license key, to check it.</p>
+      <p class="legal-date">Last updated September 28, 2026</p>
+    </div>
+    <article class="legal-body container">
+      <h2>What stays on your computer</h2>
+      <p>Everything you do in Layoutly happens locally. The app keeps a small settings file in its own data folder on your computer, with:</p>
+      <ul>
+        <li>your inspect key, your stack and your AI assistant;</li>
+        <li>the last website you opened;</li>
+        <li>how many free components and styles you used today, so the daily allowance can reset at midnight;</li>
+        <li>your license key and its activation ID, if you bought one.</li>
+      </ul>
+      <p>Websites you open in the built-in browser keep their cookies and cache in that same folder, like in any browser. Components, screenshots and styles you copy go to your clipboard and nowhere else.</p>
+
+      <h2>What leaves your computer</h2>
+      <ul>
+        <li><strong>License checks</strong> (official builds only). When you activate a key, Layoutly sends it to the Lemon Squeezy license API together with a device name made of your computer's name and operating system, so you can see and manage your activations. When the app starts, it sends the key and the activation ID to confirm the license is still valid. Deactivating from Settings sends them once more.</li>
+        <li><strong>The websites you visit.</strong> The built-in browser loads them directly, so those sites receive your request the way they would from any browser.</li>
+        <li><strong>Your AI assistant.</strong> “Copy &amp; open” copies the result and opens your AI in your default browser. Layoutly sends nothing to it; you paste.</li>
+      </ul>
+      <p>The open-source build makes no license checks at all.</p>
+
+      <h2>Buying a license</h2>
+      <p>Payments are handled by Lemon Squeezy, the merchant of record, under its own privacy policy. Layoutly never sees your card details. We receive the order details Lemon Squeezy shares with sellers, such as your email address, and use them only to deliver and support your license.</p>
+
+      <h2>This website</h2>
+      <p>This site is hosted on GitHub Pages, which may log visits as described in GitHub's privacy statement. It loads fonts from Google Fonts and Fontshare and reads the project's star count from the GitHub API. We use no cookies and no analytics.</p>
+
+      <h2>Your requests</h2>
+      <p>To ask what we hold about you, or to have your purchase or support emails deleted, write to <a href="mailto:contact.iordache@gmail.com">contact.iordache@gmail.com</a>.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, the new version will be posted on this page with a new date.</p>
+    </article>
+  </main>
+  <footer class="legal-foot">
+    <div class="container legal-foot-row">
+      <span>&copy; 2026 Layoutly</span>
+      <span class="footer-legal"><a class="fl" href="terms.html">Terms</a><a class="fl" href="privacy.html">Privacy</a><a class="fl" href="mailto:contact.iordache@gmail.com">Contact</a></span>
+    </div>
+  </footer>
+</body>
+</html>

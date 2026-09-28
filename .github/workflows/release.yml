@@ -1,0 +1,66 @@
+name: Release desktop app
+
+# Push a tag like v0.1.0 (matching package.json "version") to build the macOS .dmg files and the
+# Windows installer and publish them to GitHub Releases. The landing page links to
+# releases/latest/download/<file>, so new releases are picked up automatically.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create the GitHub release (once, before the parallel builds upload to it)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="v$(node -p "require('./package.json').version")"
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "Layoutly $TAG" --notes "Download Layoutly for macOS or Windows below." --target "$GITHUB_SHA"
+
+  build:
+    needs: release
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build & upload
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional signing secrets (see PLAN.md §4). Without them the builds are unsigned
+          # (Windows) or ad-hoc signed (macOS), which run after a one-time confirmation.
+          MAC_CERT: ${{ secrets.CSC_LINK }}
+          MAC_CERT_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+          NOTARIZE_APPLE_ID: ${{ secrets.APPLE_ID }}
+          NOTARIZE_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+          NOTARIZE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          ARGS=""
+          if [ -n "$MAC_CERT" ]; then
+            export CSC_LINK="$MAC_CERT" CSC_KEY_PASSWORD="$MAC_CERT_PASSWORD"
+            if [ -n "$NOTARIZE_APPLE_ID" ]; then
+              export APPLE_ID="$NOTARIZE_APPLE_ID" APPLE_APP_SPECIFIC_PASSWORD="$NOTARIZE_PASSWORD" APPLE_TEAM_ID="$NOTARIZE_TEAM_ID"
+            fi
+          else
+            export CSC_IDENTITY_AUTO_DISCOVERY=false
+            # Apple Silicon refuses to launch unsigned apps; an ad-hoc signature makes them runnable.
+            if [ "$RUNNER_OS" = "macOS" ]; then ARGS="-c.mac.identity=-"; fi
+          fi
+          npm run build:ui
+          # Marks these installers as the official edition (free copies per day + $10 license). Builds made
+          # from source without this flag are the open-source edition, with everything unlocked.
+          npx electron-builder --publish always -c.extraMetadata.layoutlyEdition=official $ARGS

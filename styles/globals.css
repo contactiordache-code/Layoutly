@@ -1,0 +1,48 @@
+/*
+ * Tailwind for the React parts of the app. The rest of the renderer is hand-written CSS, so Tailwind's
+ * global preflight is left out and a scoped reset is applied inside .layoutly-board instead.
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+@source "../components";
+@source "../entries";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+:root {
+  --background: #0c0c10;
+  --foreground: #f4f3f8;
+}
+
+@layer base {
+  .layoutly-board,
+  .layoutly-board *,
+  .layoutly-board ::before,
+  .layoutly-board ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  .layoutly-board svg {
+    display: block;
+    vertical-align: middle;
+  }
+  .layoutly-board button {
+    background: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: inherit;
+  }
+  .layoutly-board [data-swapy-item] {
+    cursor: grab;
+  }
+  .layoutly-board [data-swapy-item]:active {
+    cursor: grabbing;
+  }
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  :root { --brand: #7c5cff; --radius: 12px; }
+  body { margin: 0; font-family: "Inter", Arial, sans-serif; background: #0f172a; color: #e2e8f0; }
+  .hero { padding: 48px; }
+  .card { display: flex; gap: 16px; padding: 24px; border-radius: var(--radius); background: #1e293b; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+  .card h2 { margin: 0; font-size: 28px; font-weight: 700; color: #ffffff; }
+  .card p { margin: 0; color: #94a3b8; }
+  .btn { display: inline-block; padding: 10px 18px; border-radius: 999px; background: var(--brand); color: #fff; text-decoration: none; }
+  .btn:hover { background: var(--brand); opacity: .9; }
+  .btn::before { content: "→"; margin-right: 6px; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div class="card" id="card">
+      <h2>Ship faster</h2>
+      <p>Copy any <strong>component</strong> into your LLM.</p>
+      <a class="btn" href="/pricing" onclick="alert(1)" data-track="x">Get started</a>
+      <img src="/logo.png" alt="Logo" width="40" height="40">
+      <div class="hidden">secret</div>
+      <script>window.x = 1;</script>
+      <svg viewBox="0 0 24 24" width="16" height="16"><path d="M0 0h24v24H0z"/></svg>
+    </div>
+  </section>
+</body>
+</html>

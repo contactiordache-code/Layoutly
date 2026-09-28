@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-28T06:36:16Z",
+  "title": "Design System: Layoutly",
+  "extensions": {
+    "colorMeta": {
+      "signal-blue": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "#155dfc",
+        "tonalRamp": [
+          "oklch(15% 0.136 262.9)",
+          "oklch(25% 0.164 262.9)",
+          "oklch(37% 0.196 262.9)",
+          "oklch(50% 0.232 262.9)",
+          "oklch(62% 0.226 262.9)",
+          "oklch(74% 0.194 262.9)",
+          "oklch(85% 0.164 262.9)",
+          "oklch(95% 0.136 262.9)"
+        ]
+      },
+      "signal-blue-bright": {
+        "role": "primary",
+        "displayName": "Signal Blue Bright",
+        "canonical": "#3a7bff",
+        "tonalRamp": [
+          "oklch(15% 0.115 262.4)",
+          "oklch(25% 0.139 262.4)",
+          "oklch(37% 0.166 262.4)",
+          "oklch(50% 0.196 262.4)",
+          "oklch(62% 0.192 262.4)",
+          "oklch(74% 0.164 262.4)",
+          "oklch(85% 0.139 262.4)",
+          "oklch(95% 0.115 262.4)"
+        ]
+      },
+      "cobalt": {
+        "role": "primary",
+        "displayName": "Cobalt",
+        "canonical": "#1447e6",
+        "tonalRamp": [
+          "oklch(15% 0.135 264.4)",
+          "oklch(25% 0.162 264.4)",
+          "oklch(37% 0.195 264.4)",
+          "oklch(50% 0.23 264.4)",
+          "oklch(62% 0.224 264.4)",
+          "oklch(74% 0.192 264.4)",
+          "oklch(85% 0.162 264.4)",
+          "oklch(95% 0.135 264.4)"
+        ]
+      },
+      "deep-navy": {
+        "role": "secondary",
+        "displayName": "Deep Navy",
+        "canonical": "#001880",
+        "tonalRamp": [
+          "oklch(15% 0.095 264.0)",
+          "oklch(25% 0.114 264.0)",
+          "oklch(37% 0.137 264.0)",
+          "oklch(50% 0.162 264.0)",
+          "oklch(62% 0.158 264.0)",
+          "oklch(74% 0.135 264.0)",
+          "oklch(85% 0.114 264.0)",
+          "oklch(95% 0.095 264.0)"
+        ]
+      },
+      "sky-cyan": {
+        "role": "secondary",
+        "displayName": "Sky Cyan",
+        "canonical": "#00bcff",
+        "tonalRamp": [
+          "oklch(15% 0.086 233.3)",
+          "oklch(25% 0.103 233.3)",
+          "oklch(37% 0.124 233.3)",
+          "oklch(50% 0.146 233.3)",
+          "oklch(62% 0.143 233.3)",
+          "oklch(74% 0.122 233.3)",
+          "oklch(85% 0.103 233.3)",
+          "oklch(95% 0.086 233.3)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#0f1324",
+        "tonalRamp": [
+          "oklch(15% 0.019 272.7)",
+          "oklch(25% 0.023 272.7)",
+          "oklch(37% 0.028 272.7)",
+          "oklch(50% 0.033 272.7)",
+          "oklch(62% 0.032 272.7)",
+          "oklch(74% 0.028 272.7)",
+          "oklch(85% 0.023 272.7)",
+          "oklch(95% 0.019 272.7)"
+        ]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "#364153",
+        "tonalRamp": [
+          "oklch(15% 0.019 260.2)",
+          "oklch(25% 0.023 260.2)",
+          "oklch(37% 0.027 260.2)",
+          "oklch(50% 0.032 260.2)",
+          "oklch(62% 0.032 260.2)",
+          "oklch(74% 0.027 260.2)",
+          "oklch(85% 0.023 260.2)",
+          "oklch(95% 0.019 260.2)"
+        ]
+      },
+      "steel": {
+        "role": "neutral",
+        "displayName": "Steel",
+        "canonical": "#6b7280",
+        "tonalRamp": [
+          "oklch(15% 0.013 264.4)",
+          "oklch(25% 0.016 264.4)",
+          "oklch(37% 0.019 264.4)",
+          "oklch(50% 0.022 264.4)",
+          "oklch(62% 0.022 264.4)",
+          "oklch(74% 0.018 264.4)",
+          "oklch(85% 0.016 264.4)",
+          "oklch(95% 0.013 264.4)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#e5e7eb",
+        "tonalRamp": [
+          "oklch(15% 0.003 264.5)",
+          "oklch(25% 0.004 264.5)",
+          "oklch(37% 0.005 264.5)",
+          "oklch(50% 0.005 264.5)",
+          "oklch(62% 0.005 264.5)",
+          "oklch(74% 0.005 264.5)",
+          "oklch(85% 0.004 264.5)",
+          "oklch(95% 0.003 264.5)"
+        ]
+      },
+      "cloud": {
+        "role": "neutral",
+        "displayName": "Cloud",
+        "canonical": "#f3f4f6",
+        "tonalRamp": [
+          "oklch(15% 0.002 264.5)",
+          "oklch(25% 0.002 264.5)",
+          "oklch(37% 0.002 264.5)",
+          "oklch(50% 0.003 264.5)",
+          "oklch(62% 0.003 264.5)",
+          "oklch(74% 0.002 264.5)",
+          "oklch(85% 0.002 264.5)",
+          "oklch(95% 0.002 264.5)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#f9fafb",
+        "tonalRamp": [
+          "oklch(15% 0.001 247.8)",
+          "oklch(25% 0.001 247.8)",
+          "oklch(37% 0.001 247.8)",
+          "oklch(50% 0.002 247.8)",
+          "oklch(62% 0.002 247.8)",
+          "oklch(74% 0.001 247.8)",
+          "oklch(85% 0.001 247.8)",
+          "oklch(95% 0.001 247.8)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.0 89.9)",
+          "oklch(25% 0.0 89.9)",
+          "oklch(37% 0.0 89.9)",
+          "oklch(50% 0.0 89.9)",
+          "oklch(62% 0.0 89.9)",
+          "oklch(74% 0.0 89.9)",
+          "oklch(85% 0.0 89.9)",
+          "oklch(95% 0.0 89.9)"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#1a1a1a",
+        "tonalRamp": [
+          "oklch(15% 0.0 89.9)",
+          "oklch(25% 0.0 89.9)",
+          "oklch(37% 0.0 89.9)",
+          "oklch(50% 0.0 89.9)",
+          "oklch(62% 0.0 89.9)",
+          "oklch(74% 0.0 89.9)",
+          "oklch(85% 0.0 89.9)",
+          "oklch(95% 0.0 89.9)"
+        ]
+      },
+      "carbon": {
+        "role": "neutral",
+        "displayName": "Carbon",
+        "canonical": "#0a0a0a",
+        "tonalRamp": [
+          "oklch(15% 0.0 89.9)",
+          "oklch(25% 0.0 89.9)",
+          "oklch(37% 0.0 89.9)",
+          "oklch(50% 0.0 89.9)",
+          "oklch(62% 0.0 89.9)",
+          "oklch(74% 0.0 89.9)",
+          "oklch(85% 0.0 89.9)",
+          "oklch(95% 0.0 89.9)"
+        ]
+      },
+      "code-text": {
+        "role": "neutral",
+        "displayName": "Code Text",
+        "canonical": "#d6d4e6",
+        "tonalRamp": [
+          "oklch(15% 0.014 291.0)",
+          "oklch(25% 0.016 291.0)",
+          "oklch(37% 0.02 291.0)",
+          "oklch(50% 0.023 291.0)",
+          "oklch(62% 0.023 291.0)",
+          "oklch(74% 0.019 291.0)",
+          "oklch(85% 0.016 291.0)",
+          "oklch(95% 0.014 291.0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The hero headline only."
+      },
+      "display-accent": {
+        "displayName": "Notch Accent",
+        "purpose": "One emphasized phrase per headline, in Cobalt."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings and the app start screen."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card, step, modal and empty-state titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Marketing and legal reading text."
+      },
+      "body-ui": {
+        "displayName": "Body UI",
+        "purpose": "App controls, sidebar and settings text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase tags, column headings and section labels."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Code, values and measurements only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "light-stock",
+        "value": "inset 0 1px 0 rgba(255,255,255,.9), 0 0 0 1px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.06)",
+        "purpose": "White buttons, keycaps, chips, icon chips."
+      },
+      {
+        "name": "dark-stock",
+        "value": "inset 0 1px 0 rgba(255,255,255,.08), 0 4px 12px rgba(0,0,0,.18)",
+        "purpose": "Dark buttons and toasts."
+      },
+      {
+        "name": "blue-stock",
+        "value": "inset 0 1px 0 rgba(255,255,255,.4), inset 0 -2px 4px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.08)",
+        "purpose": "The pill and blue buttons."
+      },
+      {
+        "name": "tile-ring",
+        "value": "0 0 0 1px #e5e7eb, 0 4px 12px rgba(0,24,128,.06)",
+        "purpose": "Tiles, cards and swatches."
+      },
+      {
+        "name": "raised-segment",
+        "value": "0 0 0 1px rgba(0,0,0,.06), 0 1px 3px rgba(0,0,0,.08)",
+        "purpose": "The active tab or segment."
+      },
+      {
+        "name": "modal",
+        "value": "0 0 0 1px rgba(15,19,36,.06), 0 30px 80px rgba(0,24,128,.22)",
+        "purpose": "Dialogs only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-soft",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Hover lifts, arrows, reveals."
+      },
+      {
+        "name": "ease-in-out-pill",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "The pill sliding across a button; rails filling."
+      },
+      {
+        "name": "press",
+        "value": "transform: scale(0.98), 150ms",
+        "purpose": "Every pressable control."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "960px"
+      },
+      {
+        "name": "xl",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Dark Button with Pill",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Primary action on the site; the blue pill slides across on hover.",
+      "html": "<button class=\"ds-btn-dark\"><span class=\"ds-pill\"></span>Download free</button>",
+      "css": ".ds-btn-dark { position: relative; overflow: hidden; height: 44px; padding: 0 16px 0 48px; border: 0; border-radius: 12px; color: #fff; font: 500 14px/20px Inter, sans-serif; letter-spacing: -0.025em; cursor: pointer; background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 4px 12px rgba(0,0,0,.18); } .ds-pill { position: absolute; top: 4px; bottom: 4px; left: 4px; width: 36px; border-radius: 7px; background: linear-gradient(180deg, #3a7bff 0%, #155dfc 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.4), inset 0 -2px 4px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.08); transition: width .2s cubic-bezier(.65,0,.35,1); } .ds-btn-dark:hover .ds-pill, .ds-btn-dark:focus-visible .ds-pill { width: calc(100% - 8px); } .ds-btn-dark:focus-visible { outline: 2px solid #155dfc; outline-offset: 2px; } .ds-btn-dark:active { transform: scale(.98); }"
+    },
+    {
+      "name": "Light Button with Pill",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Secondary action on the site.",
+      "html": "<button class=\"ds-btn-light\"><span class=\"ds-pill\"></span>View the source</button>",
+      "css": ".ds-btn-light { position: relative; overflow: hidden; height: 44px; padding: 0 16px 0 48px; border: 0; border-radius: 12px; color: #0a0a0a; font: 500 14px/20px Inter, sans-serif; letter-spacing: -0.025em; cursor: pointer; background: linear-gradient(180deg, #ffffff 0%, #ededed 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 0 0 1px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.06); } .ds-pill { position: absolute; top: 4px; bottom: 4px; left: 4px; width: 36px; border-radius: 7px; background: linear-gradient(180deg, #3a7bff 0%, #155dfc 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.4), inset 0 -2px 4px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.08); transition: width .2s cubic-bezier(.65,0,.35,1); } .ds-btn-light:hover .ds-pill, .ds-btn-light:focus-visible .ds-pill { width: calc(100% - 8px); } .ds-btn-light:focus-visible { outline: 2px solid #155dfc; outline-offset: 2px; } .ds-btn-light:active { transform: scale(.98); }"
+    },
+    {
+      "name": "Blue Button",
+      "kind": "button",
+      "refersTo": "button-blue",
+      "description": "Primary action inside the desktop app (Copy, Open, Extract style).",
+      "html": "<button class=\"ds-btn-blue\">Copy</button>",
+      "css": ".ds-btn-blue { height: 36px; padding: 0 14px; border: 0; border-radius: 10px; color: #fff; font: 500 13px Inter, sans-serif; cursor: pointer; background: linear-gradient(180deg, #3a7bff 0%, #155dfc 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.4), inset 0 -2px 4px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.08); transition: filter .15s, transform .15s; } .ds-btn-blue:hover { filter: brightness(1.07); } .ds-btn-blue:active { transform: scale(.98); } .ds-btn-blue:focus-visible { outline: 2px solid #155dfc; outline-offset: 2px; }"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "nav",
+      "refersTo": "segmented",
+      "description": "Tabs and format switches: Cloud track, raised paper segment.",
+      "html": "<div class=\"ds-seg\"><button class=\"on\">AI prompt</button><button>HTML</button><button>CSS</button></div>",
+      "css": ".ds-seg { display: inline-flex; gap: 2px; padding: 3px; border-radius: 11px; background: #f3f4f6; } .ds-seg button { height: 30px; padding: 0 14px; border: 0; border-radius: 8px; background: transparent; color: #364153; font: 500 13px Inter, sans-serif; cursor: pointer; } .ds-seg button:hover { color: #0f1324; } .ds-seg button.on { background: #fff; color: #0f1324; box-shadow: 0 0 0 1px rgba(0,0,0,.06), 0 1px 3px rgba(0,0,0,.08); } .ds-seg button:focus-visible { outline: 2px solid #155dfc; outline-offset: 2px; }"
+    },
+    {
+      "name": "Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "URL bar, license key, search.",
+      "html": "<input class=\"ds-input\" placeholder=\"stripe.com\">",
+      "css": ".ds-input { height: 36px; padding: 0 12px; border: 0; border-radius: 10px; outline: 0; background: #fff; color: #0f1324; font: 14px Inter, sans-serif; box-shadow: 0 0 0 1px #e5e7eb, 0 1px 2px rgba(15,19,36,.04); transition: box-shadow .15s; } .ds-input::placeholder { color: #6b7280; } .ds-input:focus { box-shadow: 0 0 0 1px #155dfc, 0 0 0 4px rgba(21,93,252,.1); }"
+    },
+    {
+      "name": "Tile",
+      "kind": "card",
+      "refersTo": "tile",
+      "description": "White sheet on a sky stage or board.",
+      "html": "<div class=\"ds-tile\"><h3>Fonts</h3><p>Families &amp; weights</p></div>",
+      "css": ".ds-tile { width: 240px; padding: 20px; border-radius: 16px; background: #fff; box-shadow: 0 0 0 1px rgba(15,19,36,.06), 0 4px 12px rgba(0,24,128,.06); } .ds-tile h3 { margin: 0; font: 400 22px/1.1 'Stack Sans Headline', Inter, sans-serif; letter-spacing: -0.025em; color: #001880; } .ds-tile p { margin: 4px 0 0; font: 13px/1.4 Inter, sans-serif; color: #6b7280; }"
+    },
+    {
+      "name": "Tag Label",
+      "kind": "chip",
+      "refersTo": "tag-label",
+      "description": "Uppercase cobalt label with dot separators.",
+      "html": "<p class=\"ds-tags\">Mac<i></i>Windows<i></i>Open-source</p>",
+      "css": ".ds-tags { display: flex; align-items: center; gap: 10px; margin: 0; font: 600 12px/16px Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #1447e6; } .ds-tags i { width: 3px; height: 3px; border-radius: 50%; background: currentColor; }"
+    },
+    {
+      "name": "Code Block",
+      "kind": "custom",
+      "refersTo": "code-block",
+      "description": "The one dark surface: exported code.",
+      "html": "<pre class=\"ds-code\"><span style=\"color:#fcd34d\">:root</span> {\n  <span style=\"color:#93c5fd\">--color-primary</span>: <span style=\"color:#86efac\">#155dfc</span>;\n}</pre>",
+      "css": ".ds-code { margin: 0; padding: 14px 16px; border-radius: 12px; color: #d6d4e6; font: 500 12px/1.65 'JetBrains Mono', ui-monospace, monospace; background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 4px 12px rgba(0,0,0,.18); }"
+    },
+    {
+      "name": "Sky Stage",
+      "kind": "custom",
+      "description": "The signature container: the hero's sky wash holding a live demonstration.",
+      "html": "<div class=\"ds-stage\"><span class=\"ds-key\">S</span></div>",
+      "css": ".ds-stage { display: grid; place-items: center; width: 320px; height: 200px; border-radius: 20px; background: linear-gradient(to bottom, rgba(0,188,255,.2), rgba(0,188,255,0) 85%), #f9fafb; box-shadow: inset 0 0 0 1px rgba(0,24,128,.08); } .ds-key { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 14px; color: #fff; font: 600 24px Inter, sans-serif; background: linear-gradient(180deg, #3a7bff 0%, #155dfc 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.4), inset 0 -2px 4px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.08); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Clear Sky Workbench",
+    "overview": "Layoutly is a workbench set out under a clear sky. The surfaces are light and airy: near-white paper under a cyan wash that fades down from the top of the hero and every \"stage\" that holds a demonstration. On those surfaces sit tools you can almost pick up: buttons, keycaps and pills cut from three stocks (white, black and signal blue) with a highlight on top and a soft shadow underneath. The product is an inspector, but it refuses the dark DevTools mood; it brings inspection into daylight.\n\nType does the talking. Headlines are set in Stack Sans Headline in deep navy, with the phrase that matters switched to its sibling, Stack Sans Notch, in cobalt. Everything else is quiet Inter in slate and steel. Code is the only thing that stays dark: code blocks are black slabs, because that is where syntax color reads best.\n\nThe same world runs through the marketing site (`website/`) and the desktop app (`src/renderer/`). The site is the reference; the app follows it.",
+    "keyCharacteristics": [
+      "Light surfaces with the sky wash (cyan at 20% fading to transparent) marking \"stages\".",
+      "Navy Stack Sans headlines with one Notch phrase in cobalt.",
+      "Tactile controls from three stocks: light, dark and blue.",
+      "Hairlines (1px) and small square ticks frame sections.",
+      "Code is dark; everything else is light."
+    ],
+    "rules": [
+      {
+        "name": "The One Blue Action Rule",
+        "body": "Signal Blue marks what you can do or what is active. Headlines never use it; they use Deep Navy and Cobalt.",
+        "section": "colors"
+      },
+      {
+        "name": "The Sky Is a Wash Rule",
+        "body": "Sky Cyan only ever appears as the fading gradient. A solid cyan fill or a cyan border is off-system.",
+        "section": "colors"
+      },
+      {
+        "name": "The Client's Colors Rule",
+        "body": "Colors extracted from a user's site (style board cards, swatches) are content, shown as-is. They never restyle the chrome around them.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Notch Phrase Rule",
+        "body": "A headline may switch one phrase to Stack Sans Notch in Cobalt (\"Copy *any website component*\", \"One *key.*\"). Never more than one per heading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Means Data Rule",
+        "body": "Monospace appears only for code, values and measurements.",
+        "section": "typography"
+      },
+      {
+        "name": "The Offset Shadow Rule",
+        "body": "Every shadow has a downward offset and a soft blur. No zero-offset colored glows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** put new demonstrations on a sky stage and new reading content on paper.",
+      "**Do** build controls from the three stocks (light, dark, blue) with their shadows as listed above.",
+      "**Do** keep headlines at weight 400 in Deep Navy, with at most one Notch phrase in Cobalt.",
+      "**Do** draw icons as SVG (Lucide paths, 1.75 to 2px stroke) inside light-stock chips.",
+      "**Do** keep code blocks dark and everything around them light.",
+      "**Do** theme the browser surfaces: focus rings, selection (Signal Blue at 18%), thin scrollbars."
+    ],
+    "donts": [
+      "**Don't** use Unicode glyphs or emoji as icons.",
+      "**Don't** add dark full-page surfaces; the only dark elements are code, the site nav, dark buttons and toasts.",
+      "**Don't** use purple (#7c5cff) or other off-family accents in the chrome; that was the old identity.",
+      "**Don't** use gradient text, glassmorphism as decoration, or zero-offset colored glows.",
+      "**Don't** use monospace for anything that is not code, a value or a measurement."
+    ]
+  }
+}
