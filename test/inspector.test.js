@@ -124,7 +124,10 @@ test('overlay highlights, navigates and selects like Chrome Inspect', { skip }, 
     let pageSawClick = false;
     document.querySelector('.btn').addEventListener('click', () => (pageSawClick = true));
     window.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
-    await new Promise((r) => setTimeout(r, 100));
+    // The selection is sent two animation frames later; slow CI machines need more than a fixed delay.
+    for (let t = 0; t < 2000 && !log.some(([c]) => c === 'inspector:selected'); t += 20) {
+      await new Promise((r) => setTimeout(r, 20));
+    }
     return {
       hasOverlay,
       overlayGone: !document.getElementById('layoutly-inspector-overlay'),
