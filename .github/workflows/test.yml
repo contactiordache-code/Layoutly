@@ -24,4 +24,13 @@ jobs:
       - run: npx playwright-core install chromium
       - run: npm run typecheck
       - run: npm run build:ui
-      - run: npm test
+      - name: Run tests
+        shell: bash
+        run: |
+          set -o pipefail
+          npm test 2>&1 | tee test.log
+      # Failures as annotations, so they show on the run page without opening the log.
+      - name: Summarize failures
+        if: failure()
+        shell: bash
+        run: grep -E -B2 -A12 "^not ok|✖ " test.log | head -80 | sed 's/^/::error::/' || true
