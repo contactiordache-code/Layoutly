@@ -108,10 +108,11 @@ Se scanează până la 4000 de elemente vizibile: culori text / fundal / bordur�
    - [x] Landing page-ul se publică automat pe GitHub Pages: `https://contactiordache-code.github.io/Layoutly/`.
    - [x] Butoanele de download duc la `releases/latest/download/...`, deci fiecare versiune nouă apare automat.
    - Versiune nouă: crești `version` în `package.json`, apoi `git tag vX.Y.Z && git push --tags`.
-3. **Semnare cod** (altfel apar avertismente la instalare)
-   - [ ] macOS: Apple Developer ($99/an) → certificat „Developer ID Application” + notarizare
-         (secrete `CSC_LINK`, `CSC_KEY_PASSWORD`, `APPLE_ID`, `APPLE_APP_SPECIFIC_PASSWORD`, `APPLE_TEAM_ID` în GitHub).
-   - [ ] Windows: certificat de code signing (ex. Azure Trusted Signing ~ $10/lună) sau acceptă SmartScreen la început.
+3. **Semnare cod** — decis: nu, deocamdată (costă). Installer-ele rămân nesemnate (macOS: semnătură ad-hoc):
+   macOS cere „Open Anyway” din Privacy & Security, Windows „More info → Run anyway”, o singură dată.
+   Site-ul explică pașii sub butoanele de download și în FAQ (`#first-launch`).
+   Dacă se schimbă ceva: `release.yml` folosește automat secretele `CSC_LINK`, `CSC_KEY_PASSWORD`, `APPLE_ID`,
+   `APPLE_APP_SPECIFIC_PASSWORD`, `APPLE_TEAM_ID` (Apple Developer, $99/an) când există.
 4. **Landing page**
    - [ ] (Opțional) domeniu propriu (ex. `layoutly.app`) legat la GitHub Pages.
    - [ ] Pune link-urile reale în `website/config.js`.

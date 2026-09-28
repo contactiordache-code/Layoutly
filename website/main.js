@@ -61,6 +61,14 @@ document.querySelectorAll('.pc-toggle').forEach((btn) => {
   });
 });
 
+// A link to the first-launch answer opens it, not just scrolls to it.
+document.querySelectorAll('a[href="#first-launch"]').forEach((a) =>
+  a.addEventListener('click', () => {
+    const d = document.getElementById('first-launch');
+    if (d) d.open = true;
+  })
+);
+
 // Mobile menu.
 (function () {
   const toggle = document.querySelector('.nav-toggle');
