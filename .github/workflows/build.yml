@@ -1,0 +1,55 @@
+name: Build installers (preview)
+
+# Builds the official macOS and Windows installers on every change to the app, without publishing
+# them. Download them from the run's "Artifacts" section to try a build on a real machine before
+# tagging a release. Releases themselves are made by release.yml.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'components/**'
+      - 'entries/**'
+      - 'styles/**'
+      - 'build/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'vite.config.ts'
+      - '.github/workflows/build.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build installers
+        shell: bash
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+        run: |
+          ARGS=""
+          # Apple Silicon refuses to launch unsigned apps; an ad-hoc signature makes them runnable.
+          if [ "$RUNNER_OS" = "macOS" ]; then ARGS="-c.mac.identity=-"; fi
+          npm run build:ui
+          npx electron-builder --publish never -c.extraMetadata.layoutlyEdition=official $ARGS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Layoutly-${{ runner.os }}
+          path: |
+            dist/*.dmg
+            dist/*.exe
+          if-no-files-found: error
+          retention-days: 14
